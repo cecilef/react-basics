@@ -1,12 +1,12 @@
 import React from 'react';
 
-export class PokemonListItem extends React.Component {
+var PokemonListItem = React.createClass ({
 
 	render() {
 		return (
 			<tr>
 				<td>
-					<img src={"img/" + this.props.img} />
+					<img src={this.props.img} />
 				</td>
 				<td>
 					<span>{this.props.name}</span>
@@ -17,4 +17,6 @@ export class PokemonListItem extends React.Component {
 			</tr>
 		)
 	}
-}
+})
+
+export default PokemonListItem;
