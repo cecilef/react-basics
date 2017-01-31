@@ -1,6 +1,6 @@
 import React from 'react';
 
-var PokemonListItem = React.createClass ({
+export class PokemonListItem extends React.Component {
 
 	render() {
 		return (
@@ -17,6 +17,4 @@ var PokemonListItem = React.createClass ({
 			</tr>
 		)
 	}
-})
-
-export default PokemonListItem;
+}
