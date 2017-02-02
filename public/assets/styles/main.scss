@@ -1,3 +1,10 @@
 body {
 	background: #ece7e7;
 }
+
+.pokemon__loading-icon {
+	background-image: $pokemon-loading;
+	display: block;
+	width: 144px;
+	height: 127px;
+}

@@ -4,18 +4,13 @@ import { PokemonList } from '../poke-list/poke-list';
 
 export class UpperNavigation extends React.Component {
 
-	render() {
-
-		return (
-			<Tabs className="tabs-wrapper">
-				<Tab active="true" title="Home">
-					<span className="poke__home-icon"></span>
-				</Tab>
-				<Tab title="Pokemon List">
-					<PokemonList pokemons={this.props.pokemons}/>
-				</Tab>
-				<Tab title="Pokemon Search"></Tab>
-			</Tabs>
-		);
-	}
+ render() {
+ 	return (
+ 		<Tabs tab_list={[
+			{title: 'Home', id: 0},
+			{title: 'Pokemon List', id: 1},
+			{title: 'Pokemon search', id: 2}
+		]}/>
+	)
+ }
 }
