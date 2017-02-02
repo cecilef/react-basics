@@ -2,18 +2,8 @@ import React from 'react';
 
 export class Tabs extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.setActiveTab = this.setActiveTab.bind(this);
-		this.state = {
-			activeTab: 0
-		}
-	}
-
-	setActiveTab(tabId) {
-		this.setState({
-			activeTab: tabId
-		});
+	setActiveTab(tab) {
+		this.props.onChange(tab);
 	}
 
 	render() {
@@ -21,8 +11,8 @@ export class Tabs extends React.Component {
 			return <Tab
 				key={key}
 				id={tab.id}
-				className={tab.id === this.state.activeTab ? 'active' : ''}
-				onClickMethod={(tab) => this.setActiveTab(tab.id)}
+				className={tab.id === this.props.currentTab ? 'active' : ''}
+				onClickMethod={this.setActiveTab.bind(this, tab)}
 				title={tab.title}
 			/>
 		});
