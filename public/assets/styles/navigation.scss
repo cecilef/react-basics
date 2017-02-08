@@ -1,0 +1,21 @@
+.tabs-container {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  display: inline;
+  padding: 60px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.poke__home-icon {
+  background: $house;
+  width: 153px;
+  height: 105px;
+  display: block;
+}
