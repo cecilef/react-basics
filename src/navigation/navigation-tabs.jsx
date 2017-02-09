@@ -3,7 +3,7 @@ import React from 'react';
 export class Tabs extends React.Component {
 
 	setActiveTab(tab) {
-		this.props.onChange(tab);
+		this.props.changeCurrentTab(tab);
 	}
 
 	render() {

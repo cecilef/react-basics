@@ -3,17 +3,9 @@ import { Tabs, Tab } from './navigation-tabs'
 import { PokemonList } from '../poke-list/poke-list';
 
 export class UpperNavigation extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentTab: 0
-		}
-	}
 
 	setCurrentTab(tab) {
-		this.setState({
-			currentTab: tab.id
-		});
+		this.props.setActiveTab(tab);
 	}
 
  render() {
@@ -22,7 +14,7 @@ export class UpperNavigation extends React.Component {
 			{title: 'Home', id: 0},
 			{title: 'Pokemon List', id: 1},
 			{title: 'Pokemon search', id: 2}
-		]} currentTab={this.state.currentTab} onChange={this.setCurrentTab.bind(this)}/>
+		]} currentTab={this.props.activeTab} changeCurrentTab={this.setCurrentTab.bind(this)}/>
 	)
  }
 }
