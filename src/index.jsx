@@ -18,9 +18,9 @@ function fetchFirstGenPokemons() {
 	});
 }
 
-fetchFirstGenPokemons().then((result) => {
+fetchFirstGenPokemons().then((response) => {
 
-	render( <AppContainer><App list={[result]}/></AppContainer>, document.querySelector("#app"));
+	render( <AppContainer><App pokemons={response.results}/></AppContainer>, document.querySelector("#app"));
 
 	if (module && module.hot) {
 		module.hot.accept('./app.jsx', () => {
@@ -33,4 +33,4 @@ fetchFirstGenPokemons().then((result) => {
 			);
 		});
 	}
-});
+})
