@@ -1,5 +1,6 @@
 import React from 'react';
 import { UpperNavigation } from './navigation/upper-navigation';
+import { Content } from './page-content/content';
 
 export default class App extends React.Component {
 
@@ -18,11 +19,12 @@ export default class App extends React.Component {
 	}
 
 	render() {
-    return (
-      <div>
+		return (
+			<div>
 				<UpperNavigation pokemons={this.props.list} activeTab={this.state.activeTab}
 												 setActiveTab={this.setActiveTab.bind(this)}/>
-      </div>
-    )
+				<Content activeTab={this.state.activeTab} pokemons={this.props.pokemons}/>
+			</div>
+		)
   }
 }

@@ -10,7 +10,7 @@ export class PokemonList extends React.Component {
 			<table>
 				<PokemonListHeader />
 				<tbody>
-					{this.props.pokemons[0].results.map((pokemon) => {
+					{this.props.pokemons.map((pokemon) => {
 						key++ ;
 						return <PokemonListItem img={'./assets/img/' + key + '.png'}
 																		name={pokemon.name}
