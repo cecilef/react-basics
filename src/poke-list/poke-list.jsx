@@ -12,7 +12,7 @@ export class PokemonList extends React.Component {
 				<tbody>
 					{this.props.pokemons.map((pokemon) => {
 						key++ ;
-						return <PokemonListItem img={'./assets/img/' + key + '.png'}
+						return <PokemonListItem img={'./assets/img/animated/' + key + '.gif'}
 																		name={pokemon.name}
 																		type="type"
 																		key={"key" + key}
